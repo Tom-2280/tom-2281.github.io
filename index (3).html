@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History of Mental Health Diagnosis: Racial and Cultural Biases</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#165DFF',
+                        secondary: '#FF7D00',
+                        neutral: '#F5F7FA',
+                        dark: '#1D2129',
+                        light: '#FFFFFF',
+                        accent: '#E53E3E',
+                    },
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .text-shadow {
+                text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+            .card-hover {
+                transition: all 0.3s ease;
+            }
+            .card-hover:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            }
+            .section-transition {
+                transition: all 0.5s ease;
+            }
+            .bg-gradient-blue {
+                background: linear-gradient(120deg, #165DFF, #003AB0);
+            }
+            .scroll-indicator {
+                height: 3px;
+                background-color: #165DFF;
+                position: fixed;
+                top: 0;
+                left: 0;
+                z-index: 100;
+                width: 0%;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="font-inter text-dark bg-neutral">
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-indicator" id="scrollIndicator"></div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full bg-white/90 backdrop-blur-sm shadow-sm z-50 transition-all duration-300">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <a href="#" class="text-2xl font-bold text-primary flex items-center">
+                    <i class="fa fa-heartbeat mr-2"></i>
+                    <span>Mental Health<span class="text-secondary">Diagnosis</span></span>
+                </a>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#case-studies" class="font-medium hover:text-primary transition-colors">Case Studies</a>
+                    <a href="#dsm-issues" class="font-medium hover:text-primary transition-colors">DSM Issues</a>
+                    <a href="#cultural-misinterpretation" class="font-medium hover:text-primary transition-colors">Cultural Misinterpretation</a>
+                    <a href="#systemic-failures" class="font-medium hover:text-primary transition-colors">Systemic Failures</a>
+                    <a href="#accountability" class="font-medium hover:text-primary transition-colors">Accountability</a>
+                    <a href="#conclusion" class="font-medium hover:text-primary transition-colors">Conclusion</a>
+                    <a href="#references" class="font-medium hover:text-primary transition-colors">References</a>
+                </div>
+                
+                <!-- Mobile Navigation Toggle -->
+                <button id="mobileMenuBtn" class="md:hidden text-dark focus:outline-none">
+                    <i class="fa fa-bars text-xl"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile Navigation Menu -->
+            <div id="mobileMenu" class="md:hidden hidden mt-4 pb-2">
+                <div class="flex flex-col space-y-3">
+                    <a href="#case-studies" class="font-medium hover:text-primary transition-colors py-2">Case Studies</a>
+                    <a href="#dsm-issues" class="font-medium hover:text-primary transition-colors py-2">DSM Issues</a>
+                    <a href="#cultural-misinterpretation" class="font-medium hover:text-primary transition-colors py-2">Cultural Misinterpretation</a>
+                    <a href="#systemic-failures" class="font-medium hover:text-primary transition-colors py-2">Systemic Failures</a>
+                    <a href="#accountability" class="font-medium hover:text-primary transition-colors py-2">Accountability</a>
+                    <a href="#conclusion" class="font-medium hover:text-primary transition-colors py-2">Conclusion</a>
+                    <a href="#references" class="font-medium hover:text-primary transition-colors py-2">References</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="pt-28 pb-20 bg-gradient-blue text-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-[clamp(2.5rem,5vw,4rem)] font-bold leading-tight mb-6 text-shadow">
+                    Mental Health Diagnosis: A Historical Perspective on Racial and Cultural Biases
+                </h1>
+                <p class="text-[clamp(1.1rem,2vw,1.3rem)] mb-8 opacity-90">
+                    Exploring the systemic biases and cultural disparities within psychiatric diagnostic practices
+                </p>
+                <a href="#case-studies" class="inline-block bg-white text-primary font-semibold px-8 py-3 rounded-lg shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1">
+                    Explore Content
+                    <i class="fa fa-arrow-down ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Case Studies Section -->
+        <section id="case-studies" class="py-20 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-dark mb-4">Real Victim Cases: Racialized Bias in Diagnosis</h2>
+                    <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+                    <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                        In contemporary psychiatry, racial and ethnic minorities are disproportionately diagnosed with severe mental illnesses
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+                    <div class="bg-neutral rounded-xl p-8 shadow-md card-hover">
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4">
+                                <i class="fa fa-user-md text-primary text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold">Pathologizing Resistance</h3>
+                        </div>
+                        <p class="text-gray-700 mb-4">
+                            Historically in the United States, Black men exhibiting "resistance" or "non-compliance" were often diagnosed with 
+                            <span class="font-medium">"paranoid schizophrenia,"</span> pathologizing political resistance as mental illness.
+                        </p>
+                        <p class="text-gray-700 italic">
+                            "This reflects a broader cultural assumption that equates dissent with mental instability, particularly when expressed by marginalized groups."
+                        </p>
+                    </div>
+
+                    <div class="bg-neutral rounded-xl p-8 shadow-md card-hover">
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4">
+                                <i class="fa fa-university text-primary text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold">Diagnostic Disparities</h3>
+                        </div>
+                        <p class="text-gray-700 mb-4">
+                            Studies show that Black, Latinx, and Indigenous individuals are more likely to be diagnosed with schizophrenia and less likely to be diagnosed 
+                            with mood disorders like anxiety or depression, which carry less stigma.
+                        </p>
+                        <p class="text-gray-700 italic">
+                            "These disparities persist despite evidence suggesting that mental health issues are experienced similarly across racial and ethnic groups."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DSM Issues Section -->
+        <section id="dsm-issues" class="py-20 bg-neutral">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-dark mb-4">The DSM: A Rigid Framework Lacking Cultural Context</h2>
+                    <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+                    <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                        The Diagnostic and Statistical Manual of Mental Disorders (DSM) claims to be scientifically neutral but is rooted in Eurocentric perspectives
+                    </p>
+                </div>
+
+                <div class="max-w-4xl mx-auto">
+                    <div class="bg-white rounded-xl p-8 shadow-md mb-8">
+                        <div class="flex items-start mb-6">
+                            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4 mt-1">
+                                <i class="fa fa-book text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2">Cultural Blind Spots in Classification</h3>
+                                <p class="text-gray-700">
+                                    The DSM's criteria often fail to account for cultural variations in expression of distress, leading to misdiagnosis. 
+                                    Standardized tools are based on English-language norms and Western cultural frameworks.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="grid md:grid-cols-2 gap-6 mt-6">
+                            <div class="bg-neutral p-6 rounded-lg">
+                                <h4 class="font-medium mb-3">Eurocentric Assumptions</h4>
+                                <p class="text-gray-700">
+                                    What is considered a "normal" emotional response in DSM criteria often reflects white, middle-class experiences, overlooking 
+                                    culturally specific expressions of grief, trauma, or spiritual experiences.
+                                </p>
+                            </div>
+                            <div class="bg-neutral p-6 rounded-lg">
+                                <h4 class="font-medium mb-3">Pathologizing Cultural Practices</h4>
+                                <p class="text-gray-700">
+                                    Religious or spiritual practices common in non-Western cultures, such as ancestor communication or visions, 
+                                    may be misclassified as "delusions" or "hallucinations."
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cultural Misinterpretation Section -->
+        <section id="cultural-misinterpretation" class="py-20 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-dark mb-4">Cultural Differences Misconstrued as Pathology</h2>
+                    <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+                    <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                        Cultural expressions of distress are frequently misinterpreted as symptoms of mental illness
+                    </p>
+                </div>
+
+                <div class="max-w-5xl mx-auto">
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <div class="bg-neutral rounded-xl p-6 shadow-md card-hover">
+                            <div class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-6">
+                                <i class="fa fa-thermometer-half text-primary text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-center mb-4">Somatic Expressions</h3>
+                            <p class="text-gray-700">
+                                In many cultures, psychological distress is expressed physically (e.g., headaches, fatigue). 
+                                These symptoms are often misdiagnosed as depression or anxiety without considering cultural context.
+                            </p>
+                        </div>
+
+                        <div class="bg-neutral rounded-xl p-6 shadow-md card-hover">
+                            <div class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-6">
+                                <i class="fa fa-users text-primary text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-center mb-4">Collectivist Tendencies</h3>
+                            <p class="text-gray-700">
+                                Collectivist cultural values, such as prioritizing family harmony over individual expression, 
+                                may be misinterpreted as "social withdrawal" or "avoidant personality disorder."
+                            </p>
+                        </div>
+
+                        <div class="bg-neutral rounded-xl p-6 shadow-md card-hover">
+                            <div class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-6">
+                                <i class="fa fa-heartbeat text-primary text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-center mb-4">Trauma Responses</h3>
+                            <p class="text-gray-700">
+                                Cultural trauma responses, such as stoicism or silence in the face of adversity, 
+                                may be misread as "emotional detachment" or "lack of insight" rather than culturally specific coping mechanisms.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mt-12 bg-primary/5 border-l-4 border-primary p-8 rounded-r-lg">
+                        <h3 class="text-xl font-semibold mb-4">Examples of Misdiagnosis</h3>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="bg-white p-6 rounded-lg shadow-sm">
+                                <h4 class="font-medium mb-3">Immigrant Women</h4>
+                                <p class="text-gray-700">
+                                    Complaints of headaches and insomnia among immigrant women are often diagnosed as depression, 
+                                    overlooking the impact of acculturation stress and cultural expectations.
+                                </p>
+                            </div>
+                            <div class="bg-white p-6 rounded-lg shadow-sm">
+                                <h4 class="font-medium mb-3">Indigenous Communities</h4>
+                                <p class="text-gray-700">
+                                    Grief rituals or trauma narratives in Indigenous cultures, such as visions of ancestors, 
+                                    may be misinterpreted as symptoms of psychosis.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Systemic Failures Section -->
+        <section id="systemic-failures" class="py-20 bg-neutral">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-dark mb-4">Systemic Misdiagnosis and Real-World Harms</h2>
+                    <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+                    <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                        Mental health systems often fail to account for cultural differences, leading to inaccurate diagnoses and harmful outcomes
+                    </p>
+                </div>
+
+                <div class="max-w-5xl mx-auto">
+                    <div class="bg-white rounded-xl p-8 shadow-md mb-10">
+                        <div class="flex flex-col md:flex-row gap-8 items-start">
+                            <div class="md:w-2/3">
+                                <h3 class="text-xl font-semibold mb-4">The Consequences of Diagnostic Bias</h3>
+                                <p class="text-gray-700 mb-4">
+                                    Research has consistently documented racial and ethnic disparities in mental health diagnosis and treatment. 
+                                    These disparities are rooted in systemic biases rather than biological differences.
+                                </p>
+                                <ul class="space-y-3 mb-6">
+                                    <li class="flex items-start">
+                                        <i class="fa fa-exclamation-circle text-accent mt-1 mr-3"></i>
+                                        <span class="text-gray-700">Marginalized groups are more likely to receive severe diagnoses and less likely to receive appropriate treatment</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fa fa-exclamation-circle text-accent mt-1 mr-3"></i>
+                                        <span class="text-gray-700">Cultural misunderstandings between providers and patients contribute to poor communication and misdiagnosis</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fa fa-exclamation-circle text-accent mt-1 mr-3"></i>
+                                        <span class="text-gray-700">Once labeled, individuals face stigma, discrimination, and barriers to employment, housing, and social support</span>
+                                    </li>
+                                </ul>
+                                <blockquote class="italic text-gray-700 p-4 bg-primary/5 border-l-2 border-primary">
+                                    "Diagnostic bias in mental health care is not just an academic issue—it has real, lasting consequences for individuals and communities, 
+                                    perpetuating cycles of inequality and harm."
+                                </blockquote>
+                            </div>
+                            <div class="md:w-1/3 bg-primary/5 p-6 rounded-lg">
+                                <h4 class="font-semibold mb-4 text-center">Key Statistics</h4>
+                                <div class="space-y-4">
+                                    <div>
+                                        <div class="flex justify-between mb-1">
+                                            <span class="text-sm font-medium">Black Americans</span>
+                                            <span class="text-sm font-medium">3x</span>
+                                        </div>
+                                        <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                            <div class="bg-primary h-2.5 rounded-full" style="width: 75%"></div>
+                                        </div>
+                                        <p class="text-xs text-gray-500 mt-1">More likely to be diagnosed with schizophrenia than White Americans</p>
+                                    </div>
+                                    <div>
+                                        <div class="flex justify-between mb-1">
+                                            <span class="text-sm font-medium">Latino Americans</span>
+                                            <span class="text-sm font-medium">50%</span>
+                                        </div>
+                                        <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                            <div class="bg-primary h-2.5 rounded-full" style="width: 50%"></div>
+                                        </div>
+                                        <p class="text-xs text-gray-500 mt-1">Less likely to receive appropriate treatment for depression</p>
+                                    </div>
+                                    <div>
+                                        <div class="flex justify-between mb-1">
+                                            <span class="text-sm font-medium">Asian Americans</span>
+                                            <span class="text-sm font-medium">25%</span>
+                                        </div>
+                                        <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                            <div class="bg-primary h-2.5 rounded-full" style="width: 30%"></div>
+                                        </div>
+                                        <p class="text-xs text-gray-500 mt-1">Of those experiencing a mental health crisis, seek professional help</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="bg-white rounded-xl p-8 shadow-md">
+                            <h3 class="text-xl font-semibold mb-4">Root Causes of Diagnostic Bias</h3>
+                            <ul class="space-y-4">
+                                <li class="flex items-start">
+                                    <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center mr-3 mt-1 flex-shrink-0">
+                                        <i class="fa fa-book text-primary"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium">Culturally Narrow Training</h4>
+                                        <p class="text-gray-700">
+                                            Mental health professionals often receive inadequate training in cultural competency, 
+                                            leading to misinterpretation of culturally specific behaviors.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center mr-3 mt-1 flex-shrink-0">
+                                        <i class="fa fa-users text-primary"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium">Provider-Patient Dynamics</h4>
+                                        <p class="text-gray-700">
+                                            Implicit biases and cultural misunderstandings between providers and patients can 
+                                            significantly impact diagnosis and treatment decisions.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center mr-3 mt-1 flex-shrink-0">
+                                        <i class="fa fa-file-text-o text-primary"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium">Structural Barriers</h4>
+                                        <p class="text-gray-700">
+                                            Systemic issues such as lack of access to care, language barriers, and underfunded 
+                                            community mental health resources disproportionately affect marginalized groups.
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="bg-white rounded-xl p-8 shadow-md">
+                            <h3 class="text-xl font-semibold mb-4">The Human Cost of Misdiagnosis</h3>
+                            <div class="space-y-4">
+                                <div class="p-4 bg-neutral rounded-lg">
+                                    <h4 class="font-medium mb-2">Overmedication and Undertreatment</h4>
+                                    <p class="text-gray-700">
+                                        Misdiagnosis often leads to inappropriate medication regimens, which can have serious 
+                                        physical and psychological side effects, while underlying issues remain unaddressed.
+                                    </p>
+                                </div>
+                                <div class="p-4 bg-neutral rounded-lg">
+                                    <h4 class="font-medium mb-2">Social and Economic Marginalization</h4>
+                                    <p class="text-gray-700">
+                                        Mental health labels can result in discrimination in employment, housing, and social 
+                                        relationships, exacerbating the challenges faced by marginalized communities.
+                                    </p>
+                                </div>
+                                <div class="p-4 bg-neutral rounded-lg">
+                                    <h4 class="font-medium mb-2">Loss of Trust in Healthcare Systems</h4>
+                                    <p class="text-gray-700">
+                                        Experiences of diagnostic bias erode trust in mental health professionals and systems, 
+                                        leading many to avoid seeking help when needed.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Accountability Section -->
+        <section id="accountability" class="py-20 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-dark mb-4">Lack of Transparency and Accountability</h2>
+                    <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+                    <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                        Mental health diagnostic systems are often developed and maintained without input from marginalized communities
+                    </p>
+                </div>
+
+                <div class="max-w-4xl mx-auto">
+                    <div class="bg-neutral rounded-xl p-8 shadow-md mb-10">
+                        <h3 class="text-xl font-semibold mb-6">The Problem with Expert-Driven Systems</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-4 mt-1">
+                                    <i class="fa fa-gavel text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium mb-2">Dominance of Majority Perspectives</h4>
+                                    <p class="text-gray-700">
+                                        The DSM and other diagnostic frameworks are primarily developed by a small group of 
+                                        predominantly white, male experts, often without input from diverse cultural or community perspectives.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-4 mt-1">
+                                    <i class="fa fa-ban text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium mb-2">Lack of Community Involvement</h4>
+                                    <p class="text-gray-700">
+                                        Marginalized communities are rarely included in the development or validation of diagnostic tools, 
+                                        leading to frameworks that do not reflect their experiences.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-4 mt-1">
+                                    <i class="fa fa-eye-slash text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium mb-2">Opaque Decision-Making Processes</h4>
+                                    <p class="text-gray-700">
+                                        The criteria for inclusion and classification of mental disorders in diagnostic manuals are often not transparent, 
+                                        making it difficult to challenge biased or outdated assumptions.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-blue text-white rounded-xl p-8 shadow-md">
+                        <h3 class="text-xl font-semibold mb-6">The Consequences of Unaccountable Systems</h3>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="bg-white/10 p-6 rounded-lg backdrop-blur-sm">
+                                <h4 class="font-medium mb-3">Perpetuation of Harm</h4>
+                                <p class="text-white/90">
+                                    Without accountability, systems continue to reproduce racial and cultural biases, 
+                                    causing ongoing harm to marginalized communities.
+                                </p>
+                            </div>
+                            <div class="bg-white/10 p-6 rounded-lg backdrop-blur-sm">
+                                <h4 class="font-medium mb-3">Missed Opportunities for Healing</h4>
+                                <p class="text-white/90">
+                                    When diagnostic frameworks fail to account for diverse experiences, 
+                                    many individuals do not receive the care and support they truly need.
+                                </p>
+                            </div>
+                            <div class="bg-white/10 p-6 rounded-lg backdrop-blur-sm">
+                                <h4 class="font-medium mb-3">Erosion of Trust</h4>
+                                <p class="text-white/90">
+                                    Communities that have been historically marginalized by mental health systems are 
+                                    less likely to trust or engage with these services.
+                                </p>
+                            </div>
+                            <div class="bg-white/10 p-6 rounded-lg backdrop-blur-sm">
+                                <h4 class="font-medium mb-3">Reinforcement of Social Inequalities</h4>
+                                <p class="text-white/90">
+                                    Biased diagnostic practices reinforce existing social hierarchies, 
+                                    further disadvantaging already marginalized groups.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conclusion Section -->
+        <section id="conclusion" class="py-20 bg-neutral">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-dark mb-4">The "Dubious Machine" of Psychiatry</h2>
+                    <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+                    <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                        Mental health diagnosis is not a neutral scientific process but is embedded in social, cultural, and power structures
+                    </p>
+                </div>
+
+                <div class="max-w-4xl mx-auto">
+                    <div class="bg-white rounded-xl p-8 shadow-md mb-10">
+                        <div class="flex flex-col md:flex-row gap-8">
+                            <div class="md:w-2/3">
+                                <h3 class="text-xl font-semibold mb-4">The Systemic Nature of Diagnostic Bias</h3>
+                                <p class="text-gray-700 mb-4">
+                                    Mental health diagnosis is deeply intertwined with societal power structures, reflecting and reinforcing existing inequalities. 
+                                    The current system tends to pathologize cultural differences rather than recognize them as valid expressions of human diversity.
+                                </p>
+                                <ul class="space-y-3 mb-6">
+                                    <li class="flex items-start">
+                                        <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                                        <span class="text-gray-700">Diagnostic tools and practices are often based on narrow, culturally specific norms</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                                        <span class="text-gray-700">Racial and ethnic minorities are disproportionately affected by misdiagnosis and overdiagnosis</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- References Section -->
+        <section id="references" class="py-20 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-dark mb-4">References</h2>
+                    <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+                </div>
+                <div class="max-w-4xl mx-auto">
+                    <ul class="list-inside list-disc space-y-4">
+                        <li>Anglim, J., Prendeville, P., & Kinsella, W. (2018). The self-efficacy of primary teachers in supporting the inclusion of children with autism spectrum disorder. <i>Educational Psychology in Practice</i>, 34(1), 73–88. <a href="https://eric.ed.gov/?id=EJ1167545">https://eric.ed.gov/?id=EJ1167545</a></li>
+                        <li>Dickens, A., Douglas, K., & McLeod, B. (2022, June 17). How racial injustice affects us. <i>QPA Lit</i>. <a href="https://qpalit.com/674/social-justice/674/">https://qpalit.com/674/social-justice/674/</a></li>
+                        <li>Madhavi, B., & Nageswar Rao, K. (2023). DECOLONIZING NATURE: AN IN-DEPTH ANALYSIS OF ECOFEMINISM. <i>Journal of English Language and Literature</i>, 10(02), 138–144. <a href="https://doi.org/10.54513/joell.2023.10214">https://doi.org/10.54513/joell.2023.10214</a></li>
+                        <li>Mumba, M. N., Brantley, S. G., & Cross, A. (2023). Social and structural determinants of recovery: The impact of race. <i>Journal of nursing scholarship : an official publication of Sigma Theta Tau International Honor Society of Nursing</i>, 55(3), 553–555. <a href="https://doi.org/10.1111/jnu.12899">https://doi.org/10.1111/jnu.12899</a></li>
+                        <li>Carlew, A. R., & Zartman, A. L. (2016). DSM Nosology Changes in Neuropsychological Diagnoses through the Years: A Look at ADHD and Mild Neurocognitive Disorder. <i>Behavioral sciences (Basel, Switzerland)</i>, 7(1), 1. <a href="https://doi.org/10.3390/bs7010001">https://doi.org/10.3390/bs7010001</a></li>
+                        <li>Kokkinaki, T., Anagnostatou, N., Markodimitraki, M., Roumeliotaki, T., Tzatzarakis, M., Vakonaki, E., Giannakakis, G., Tsatsakis, A., & Hatzidaki, E. (2025). The development of preterm infants from low socio-economic status families: The combined effects of melatonin, autonomic nervous system maturation and psychosocial factors (ProMote): A study protocol. <i>PloS one</i>, 20(1), e0316520. <a href="https://doi.org/10.1371/journal.pone.0316520">https://doi.org/10.1371/journal.pone.0316520</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Scroll indicator functionality
+        const scrollIndicator = document.getElementById('scrollIndicator');
+        window.addEventListener('scroll', () => {
+            const totalHeight = document.body.scrollHeight - window.innerHeight;
+            const progress = (window.scrollY / totalHeight) * 100;
+            scrollIndicator.style.width = progress + '%';
+        });
+
+        // Mobile menu toggle functionality
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
+    
